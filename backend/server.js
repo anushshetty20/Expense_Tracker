@@ -15,7 +15,7 @@ const app = express();
 //Middleware to handle cors
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "*",
+    origin: "https://expense-tracker-frontend-oi6k.onrender.com" || "*",
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
