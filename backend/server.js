@@ -34,5 +34,9 @@ app.use("/api/v1/dashboard", dashboardRoutes);
 //Server uploads folder
 app.use("/uploads", express.static(path.join(__dirname,"uploads")));
 
+// Quick health check route
+app.get("/ping", (req, res) => {
+  res.status(200).send("pong");
+});
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server runnning on port ${PORT}`));
